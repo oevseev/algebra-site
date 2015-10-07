@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    overflow: hidden;
+
+    background-image: url("img/math.png");
+    color: rgb(64, 64, 64);
+    font-family: Palatino;
+}
+
+#content > h1 {
+    font-size: 32pt;
+    margin-bottom: 0;
+}
+
+#content > h2 {
+    font-size: 12pt;
+    margin-top: 4pt;
+    margin-bottom: 32pt;
+}
+
+#content > div {
+    margin-bottom: 5pt;
+}
+
+#content-summary {
+    font-size: 14pt;
+    margin-bottom: 1em;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+}
+
+.container > * {
+    height: 100%;
+}
+
+.bottom-link {
+    font-style: italic;
+}
+
+#content {
+    width: 100%;
+    padding: 2em 5em;
+
+    background-color: rgba(255, 255, 255, .975);
+}
+
+#logo {
+    width: 90pt;
+
+    background-color: rgba(128, 0, 128, .9);
+    color: white;
+    font-size: 72pt;
+    font-family: Impact;
+}
+
+.sideways {
+    position: relative;
+    top: 95%;
+
+    transform: rotate(-90deg);
+    transform-origin: top left 0;
+}
+
+.gh-mark {
+    height: 16px;
+    padding: 2px 0 0 24px;
+
+    background-image: url("img/GitHub-Mark-32px.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
