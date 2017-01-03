@@ -38,7 +38,7 @@
   }
 
   function loadData(data) {
-    var date = new Date(data.lastUpdate);
+    var date = new Date(parseInt(data.lastUpdate));
     var dateString = "(обновлено " + date.toLocaleString() + ")";
 
     document.getElementById('content-date').innerHTML = dateString;
@@ -50,7 +50,7 @@
 
   function initialize() {
     setRandomCaption();
-    loadJSON('data/summary.json?application/xhtml+xml', loadData);
+    loadJSON('data/summary.json', loadData);
   }
 
   window.onload = initialize;
