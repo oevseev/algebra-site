@@ -50,8 +50,9 @@
 
   function initialize() {
     setRandomCaption();
-    loadJSON('data/summary.json', loadData);
+    loadJSON('http://mirror.x3n.me/algebra', loadData);
   }
 
+  document.domain = "x3n.me";
   window.onload = initialize;
 })();
