@@ -15,19 +15,6 @@
     "сейчас бы в 2k17 сдавать экзамен по АТЧ"
   ];
 
-  function loadJSON(url, callback) {
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function() {
-      if (request.readyState == XMLHttpRequest.DONE && request.status == 200) {
-        var JSONObject = JSON.parse(request.responseText);
-        callback(JSONObject);
-      }
-    };
-
-    request.open('GET', url, true);
-    request.send();
-  }
-
   function setCaption(caption) {
     document.getElementById('content-caption').innerHTML = "(" + caption + ")";
   }
@@ -37,22 +24,9 @@
     setCaption(caption);
   }
 
-  function loadData(data) {
-    var date = new Date(parseInt(data.lastUpdate));
-    var dateString = "(обновлено " + date.toLocaleString() + ")";
-
-    document.getElementById('content-date').innerHTML = dateString;
-    document.getElementById('content-link').setAttribute('href', data.contentLink);
-    document.getElementById('content-summary').innerHTML = data.summary;
-
-    document.getElementById('github-link').setAttribute('href', data.githubLink);
-  }
-
   function initialize() {
     setRandomCaption();
-    loadJSON('http://mirror.x3n.me/algebra', loadData);
   }
 
-  document.domain = "x3n.me";
   window.onload = initialize;
 })();
